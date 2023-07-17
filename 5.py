@@ -30,11 +30,12 @@ class Datasender:
     
     def send(self):
         self.data = 1234  # 여기는 어떤 데이터인지
+        
         return self.data
     
     # 데이터를 저장?
     def save(self):
-        self.data_mart.save_data(self.data)
+        self.data_mart.save_data()
 
     def recieve_ans(self):  # response 검사 -> 통신 완료
         self.response = DataReceive()
@@ -81,7 +82,7 @@ class DataReceive:  # 데이터를 받아와야함
 
 class Main:
     def __init__(self):
-        self.datasender = Datasender()
+        self.datasender = Datasender()  # data=1234
         self.datamart = DataMart()
         self.datareceive = DataReceive()
 
