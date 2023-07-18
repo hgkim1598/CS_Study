@@ -19,7 +19,7 @@
     ```
         python3 main.py
     ```
-
+    <img width="300" alt="image" src="https://github.com/LeeJuHwan/Basic/assets/118493627/c46f12ab-d3ea-4eae-a767-e4bc5488f3d8">
 **unit-test**
 ---
 - tests/test_database.py
@@ -33,3 +33,4 @@
 
         cmd pytest tests/test_database.py
     ```
+    <img width="872" alt="image" src="https://github.com/LeeJuHwan/Basic/assets/118493627/17a30984-f0a3-4f1e-baa5-910f016965e3">
