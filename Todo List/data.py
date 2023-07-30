@@ -18,12 +18,20 @@
 # |                                        |
 
 import pymysql
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
 class Data:
-    def __init__():
-        host = ""
-        port = "3306"
-        database = "TodoList"
-        username = "Hyogyung"
-        password = ""
+    def __init__(self):
+        self.conn = pymysql.connect(
+            host=os.environ.get("host"),
+            port=os.environ.get("port"),
+            database=os.environ.get("database"),
+            username=os.environ.get("username"),
+            password=os.environ.get("password"),
+        )
+
+        self.cur = self.conn.cursor(pymysql.cursors.DictCursor)
